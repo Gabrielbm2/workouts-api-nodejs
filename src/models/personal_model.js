@@ -1,7 +1,6 @@
 const { Pool } = require('pg');
 const dotenv = require('dotenv');
 
-// Carregar as variáveis de ambiente do arquivo .env
 dotenv.config();
 
 const pool = new Pool({
@@ -32,5 +31,7 @@ const createPersonalTable = async () => {
 };
 
 module.exports = {
-  createPersonalTable,
+    createPersonalTable,
+    insertPersonal,
+    getPersonalByEmail,
 };
